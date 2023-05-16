@@ -1,4 +1,3 @@
-
 # Poject of Computer Architecture Course (Spring 2023)
 |Team Member|Student ID|
 |:-----:|:------:|
