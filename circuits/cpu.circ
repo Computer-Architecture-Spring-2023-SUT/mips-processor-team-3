@@ -78,7 +78,7 @@
     <a name="circuit" val="cpu"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="10" loc="(830,820)" name="myALU"/>
+    <comp lib="10" loc="(820,830)" name="myALU"/>
     <comp lib="4" loc="(90,780)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="PC"/>
