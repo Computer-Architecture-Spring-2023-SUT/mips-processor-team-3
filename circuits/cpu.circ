@@ -41,8 +41,8 @@
     </tool>
   </lib>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#mem.circ" name="8"/>
-  <lib desc="file#regfile.circ" name="9"/>
+  <lib desc="file#regfile.circ" name="8"/>
+  <lib desc="file#mem.circ" name="9"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -83,14 +83,21 @@
     <a name="circuit" val="cpu"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="8" loc="(2170,810)" name="mem">
-      <a name="label" val="DataMem"/>
+    <comp lib="4" loc="(90,780)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="label" val="PC"/>
+      <a name="showInTab" val="true"/>
+      <a name="width" val="32"/>
     </comp>
-    <comp lib="8" loc="(460,810)" name="mem">
-      <a name="label" val="InstMem"/>
-    </comp>
-    <comp lib="9" loc="(1260,810)" name="regfile">
+    <comp lib="8" loc="(1260,810)" name="regfile">
       <a name="label" val="RegisterFile"/>
     </comp>
+    <comp lib="9" loc="(2170,810)" name="mem">
+      <a name="label" val="DataMem"/>
+    </comp>
+    <comp lib="9" loc="(460,810)" name="mem">
+      <a name="label" val="InstMem"/>
+    </comp>
+    <wire from="(150,810)" to="(240,810)"/>
   </circuit>
 </project>
