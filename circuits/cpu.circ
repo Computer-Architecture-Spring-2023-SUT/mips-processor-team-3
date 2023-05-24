@@ -5,7 +5,6 @@
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="appear" val="center"/>
-      <a name="facing" val="west"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </tool>
@@ -39,8 +38,9 @@
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
   <lib desc="file#mem.circ" name="8"/>
-  <lib desc="file#regfile.circ" name="9"/>
-  <lib desc="file#control_unit.circ" name="10"/>
+  <lib desc="file#alu.circ" name="9"/>
+  <lib desc="file#regfile.circ" name="10"/>
+  <lib desc="file#alu_control.circ" name="11"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -79,6 +79,10 @@
     <a name="circuit" val="cpu"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="10" loc="(1260,810)" name="regfile">
+      <a name="label" val="RegisterFile"/>
+    </comp>
+    <comp lib="11" loc="(360,1010)" name="alu_control_unit"/>
     <comp lib="4" loc="(90,780)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="PC"/>
@@ -91,9 +95,7 @@
     <comp lib="8" loc="(460,810)" name="mem">
       <a name="label" val="InstMem"/>
     </comp>
-    <comp lib="9" loc="(1260,810)" name="regfile">
-      <a name="label" val="RegisterFile"/>
-    </comp>
+    <comp lib="9" loc="(820,830)" name="myALU"/>
     <wire from="(150,810)" to="(240,810)"/>
   </circuit>
 </project>
