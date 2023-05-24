@@ -16,6 +16,9 @@
       <a name="appearance" val="classic"/>
       <a name="radix" val="16"/>
     </tool>
+    <tool name="Tunnel">
+      <a name="width" val="2"/>
+    </tool>
     <tool name="Pull Resistor">
       <a name="facing" val="north"/>
     </tool>
@@ -38,7 +41,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="main"/>
+  <main name="control_unit"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -71,9 +74,9 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="control_unit">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="control_unit"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1100,190)" name="Tunnel">
@@ -225,7 +228,7 @@
 000011 01000000 # JAL
 </a>
     </comp>
-    <comp lib="8" loc="(1042,355)" name="Text">
+    <comp lib="8" loc="(1040,355)" name="Text">
       <a name="text" val="PLU_Logic"/>
     </comp>
     <comp lib="8" loc="(30,175)" name="Text">
