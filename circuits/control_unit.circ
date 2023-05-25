@@ -121,7 +121,7 @@
     </comp>
     <comp lib="0" loc="(280,240)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="label" val="six_upper_bits_of_instr"/>
+      <a name="label" val="opcode"/>
       <a name="width" val="6"/>
     </comp>
     <comp lib="0" loc="(310,240)" name="Tunnel">

@@ -145,6 +145,7 @@
 000011 11111 # JAL
 </a>
     </comp>
+    <comp lib="1" loc="(780,660)" name="NOT Gate"/>
     <comp lib="2" loc="(880,480)" name="Multiplexer">
       <a name="width" val="5"/>
     </comp>
@@ -159,7 +160,8 @@
     <wire from="(550,670)" to="(680,670)"/>
     <wire from="(660,450)" to="(830,450)"/>
     <wire from="(660,500)" to="(830,500)"/>
-    <wire from="(720,660)" to="(860,660)"/>
+    <wire from="(720,660)" to="(750,660)"/>
+    <wire from="(780,660)" to="(860,660)"/>
     <wire from="(830,450)" to="(830,470)"/>
     <wire from="(830,470)" to="(850,470)"/>
     <wire from="(830,490)" to="(830,500)"/>
