@@ -357,11 +357,13 @@
     <comp lib="0" loc="(570,180)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="Input1"/>
+      <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(570,270)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="Input2"/>
+      <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(570,890)" name="Tunnel">
@@ -619,10 +621,10 @@
       <a name="shift" val="ar"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="8" loc="(680,123)" name="Text">
+    <comp lib="8" loc="(680,120)" name="Text">
       <a name="text" val="Inputs"/>
     </comp>
-    <comp lib="8" loc="(823,126)" name="Text">
+    <comp lib="8" loc="(820,125)" name="Text">
       <a name="text" val="Outputs"/>
     </comp>
     <wire from="(1000,700)" to="(1000,800)"/>
