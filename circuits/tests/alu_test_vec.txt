@@ -1,2 +1,4 @@
-in1[32] in2[32] opcode[6] func[6] zero[1] Res[32]
-0x00000001 0x00000001 000000 100000 0 0x00000002
+in1[32]     in2[32]     opcode[6]  func[6]  zero[1]  Res[32]
+0xFFAABBCC  0x11332244  000000     100110   0        0xee999988 # XOR
+0xAABBCCDD  0x00000004  000000     000000   0        0xABBCCDD0 # SLL
+0x123A0482  0x53AADDCC  000000     100000   0        0x65E4E24E # ADD
