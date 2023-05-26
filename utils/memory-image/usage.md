@@ -1,0 +1,5 @@
+- use this [link](https://alanhogan.com/asu/assembler.php) to create machine code of your assembly.
+- with command `cat code.txt | awk '{print $2}' | tail -n +2` get pure machine code part.
+- decode the machine code into 4 seperate files using 'decode.py'.
+- finally, load each image file into one of the parts of memory regarding their order.
+- enjoy!

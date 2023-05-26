@@ -41,11 +41,11 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#control_unit.circ" name="8"/>
-  <lib desc="file#alu_control.circ" name="9"/>
-  <lib desc="file#regfile.circ" name="10"/>
-  <lib desc="file#alu.circ" name="11"/>
-  <lib desc="file#mem.circ" name="12"/>
+  <lib desc="file#alu.circ" name="8"/>
+  <lib desc="file#regfile.circ" name="9"/>
+  <lib desc="file#mem.circ" name="10"/>
+  <lib desc="file#alu_control.circ" name="11"/>
+  <lib desc="file#control_unit.circ" name="12"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -721,17 +721,17 @@
       <a name="label" val="rd"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="10" loc="(1510,1590)" name="regfile">
-      <a name="label" val="RegisterFile"/>
-    </comp>
-    <comp lib="11" loc="(1790,960)" name="ALU">
-      <a name="label" val="ArithLogicUnit"/>
-    </comp>
-    <comp lib="12" loc="(2300,1770)" name="mem">
+    <comp lib="10" loc="(2300,1770)" name="mem">
       <a name="label" val="DataMem"/>
     </comp>
-    <comp lib="12" loc="(580,1880)" name="mem">
+    <comp lib="10" loc="(580,1880)" name="mem">
       <a name="label" val="InstMem"/>
+    </comp>
+    <comp lib="11" loc="(2270,1480)" name="alu_control_unit">
+      <a name="label" val="ALU_Control"/>
+    </comp>
+    <comp lib="12" loc="(960,1170)" name="control_unit">
+      <a name="label" val="CU"/>
     </comp>
     <comp lib="2" loc="(1140,1780)" name="Multiplexer">
       <a name="select" val="2"/>
@@ -786,23 +786,23 @@
     <comp lib="6" loc="(145,1045)" name="Text">
       <a name="text" val="PC Logic"/>
     </comp>
-    <comp lib="6" loc="(173,887)" name="Text">
+    <comp lib="6" loc="(170,885)" name="Text">
       <a name="text" val="Branch"/>
     </comp>
-    <comp lib="6" loc="(173,947)" name="Text">
+    <comp lib="6" loc="(170,945)" name="Text">
       <a name="text" val="JR"/>
     </comp>
     <comp lib="6" loc="(185,915)" name="Text">
       <a name="text" val="Jump"/>
     </comp>
-    <comp lib="6" loc="(245,856)" name="Text">
+    <comp lib="6" loc="(245,855)" name="Text">
       <a name="text" val="Next"/>
     </comp>
-    <comp lib="8" loc="(960,1170)" name="control_unit">
-      <a name="label" val="CU"/>
+    <comp lib="8" loc="(1790,960)" name="ALU">
+      <a name="label" val="ArithLogicUnit"/>
     </comp>
-    <comp lib="9" loc="(2270,1480)" name="alu_control_unit">
-      <a name="label" val="ALU_Control"/>
+    <comp lib="9" loc="(1510,1590)" name="regfile">
+      <a name="label" val="RegisterFile"/>
     </comp>
     <wire from="(100,1040)" to="(100,1350)"/>
     <wire from="(100,1350)" to="(530,1350)"/>

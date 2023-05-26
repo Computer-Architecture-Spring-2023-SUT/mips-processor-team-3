@@ -1,0 +1,5 @@
+00400000: <main> ; <input:0> main:
+00400000: 2010000f ; <input:1> addi $s0, $zero, 15
+00400004: 20080010 ; <input:2> addi $t0, $zero, 16
+00400008: 02086820 ; <input:3> add $t5, $s0, $t0
+0040000c: 03e00008 ; <input:5> jr $ra # return to Operating System
