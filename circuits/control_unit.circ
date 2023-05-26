@@ -121,12 +121,12 @@
       <a name="label" val="func"/>
       <a name="width" val="6"/>
     </comp>
-    <comp lib="0" loc="(410,570)" name="Tunnel">
+    <comp lib="0" loc="(390,600)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="func"/>
       <a name="width" val="6"/>
     </comp>
-    <comp lib="0" loc="(410,600)" name="Tunnel">
+    <comp lib="0" loc="(400,560)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="opcode"/>
       <a name="width" val="6"/>
@@ -309,8 +309,10 @@ xxxxxx000011 0010101000 # JAL
     <wire from="(240,980)" to="(1120,980)"/>
     <wire from="(280,240)" to="(310,240)"/>
     <wire from="(280,290)" to="(310,290)"/>
+    <wire from="(390,600)" to="(470,600)"/>
+    <wire from="(400,560)" to="(410,560)"/>
+    <wire from="(410,560)" to="(410,570)"/>
     <wire from="(410,570)" to="(470,570)"/>
-    <wire from="(410,600)" to="(470,600)"/>
     <wire from="(420,190)" to="(420,320)"/>
     <wire from="(490,600)" to="(550,600)"/>
     <wire from="(520,120)" to="(520,280)"/>
