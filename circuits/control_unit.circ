@@ -103,6 +103,16 @@
       <a name="output" val="true"/>
       <a name="width" val="2"/>
     </comp>
+    <comp lib="0" loc="(1450,190)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="Finish"/>
+    </comp>
+    <comp lib="0" loc="(1450,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="Finish"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(290,180)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="opcode"/>
@@ -160,6 +170,7 @@
     </comp>
     <comp lib="0" loc="(670,520)" name="Splitter">
       <a name="appear" val="center"/>
+      <a name="bit10" val="6"/>
       <a name="bit3" val="2"/>
       <a name="bit4" val="3"/>
       <a name="bit5" val="3"/>
@@ -167,8 +178,8 @@
       <a name="bit7" val="4"/>
       <a name="bit8" val="5"/>
       <a name="bit9" val="5"/>
-      <a name="fanout" val="6"/>
-      <a name="incoming" val="10"/>
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="11"/>
       <a name="spacing" val="3"/>
     </comp>
     <comp lib="0" loc="(700,190)" name="Tunnel">
@@ -215,6 +226,9 @@
       <a name="label" val="MEMW_Mask_Sel"/>
       <a name="width" val="2"/>
     </comp>
+    <comp lib="0" loc="(810,650)" name="Tunnel">
+      <a name="label" val="Finish"/>
+    </comp>
     <comp lib="0" loc="(960,190)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="Reg_Dest_Sel"/>
@@ -231,49 +245,52 @@
       <a name="in_width" val="12"/>
       <a name="label" val="Program_Scheduler"/>
       <a name="labelfont" val="SansSerif plain 10"/>
-      <a name="out_width" val="10"/>
-      <a name="table">xxxxxx001000 0000000011 # ADDi
-xxxxxx001001 0000000011 # ADDiu
-xxxxxx001100 0000000011 # ANDi
-xxxxxx001110 0000000011 # XORi
-xxxxxx001101 0000000011 # ORi
-xxxxxx000100 0000000100 # BEQ
-xxxxxx000101 0000000100 # BNE
-xxxxxx000110 0000000110 # BLEZ
-xxxxxx000111 0000000110 # BGTZ
-xxxxxx000001 0000000110 # BGEZ
-xxxxxx100011 0001000011 # LW
-xxxxxx101011 0100000010 # SW
-xxxxxx100000 0011000011 # LB
-xxxxxx101000 1000000010 # SB
-xxxxxx001010 0000000011 # SLTi
-xxxxxx001111 0000000011 # Lui
-xxxxxx000010 0000001000 # J
-xxxxxx000011 0010101000 # JAL
-100110000000 0000010001 # XOR
-000000000000 0000010001 # SLL
-000100000000 0000010001 # SLLV
-000010000000 0000010001 # SRL
-100010000000 0000010001 # SUB
-000110000000 0000010001 # SRLV
-101010000000 0000010001 # SLT
-001100000000 0000000000 # Syscall
-100011000000 0000010001 # SUBu
-100101000000 0000010001 # OR
-100111000000 0000010001 # NOR
-100001000000 0000010001 # ADDu
-011000000000 0000010001 # MULT
-011010000000 0000010001 # DIV
-100100000000 0000010001 # AND
-100000000000 0000010001 # ADD
-001000000000 0000001100 # JR
-000011000000 0000010001 # SRA
+      <a name="out_width" val="11"/>
+      <a name="table">xxxxxx001000 00000000011 # ADDi
+xxxxxx001001 00000000011 # ADDiu
+xxxxxx001100 00000000011 # ANDi
+xxxxxx001110 00000000011 # XORi
+xxxxxx001101 00000000011 # ORi
+xxxxxx000100 00000000100 # BEQ
+xxxxxx000101 00000000100 # BNE
+xxxxxx000110 00000000110 # BLEZ
+xxxxxx000111 00000000110 # BGTZ
+xxxxxx000001 00000000110 # BGEZ
+xxxxxx100011 00001000011 # LW
+xxxxxx101011 00100000010 # SW
+xxxxxx100000 00011000011 # LB
+xxxxxx101000 01000000010 # SB
+xxxxxx001010 00000000011 # SLTi
+xxxxxx001111 00000000011 # Lui
+xxxxxx000010 00000001000 # J
+xxxxxx000011 00010101000 # JAL
+100110000000 00000010001 # XOR
+000000000000 00000010001 # SLL
+000100000000 00000010001 # SLLV
+000010000000 00000010001 # SRL
+100010000000 00000010001 # SUB
+000110000000 00000010001 # SRLV
+101010000000 00000010001 # SLT
+001100000000 10000000000 # Syscall
+100011000000 00000010001 # SUBu
+100101000000 00000010001 # OR
+100111000000 00000010001 # NOR
+100001000000 00000010001 # ADDu
+011000000000 00000010001 # MULT
+011010000000 00000010001 # DIV
+100100000000 00000010001 # AND
+100000000000 00000010001 # ADD
+001000000000 00000001100 # JR
+000011000000 00000010001 # SRA
 </a>
     </comp>
     <comp lib="8" loc="(1120,150)" name="Text">
       <a name="text" val="done"/>
     </comp>
     <comp lib="8" loc="(1275,155)" name="Text">
+      <a name="text" val="done"/>
+    </comp>
+    <comp lib="8" loc="(1445,150)" name="Text">
       <a name="text" val="done"/>
     </comp>
     <comp lib="8" loc="(390,140)" name="Text">
@@ -297,18 +314,19 @@ xxxxxx000011 0010101000 # JAL
     <comp lib="8" loc="(970,340)" name="Text">
       <a name="text" val="CU Logic"/>
     </comp>
-    <wire from="(1020,340)" to="(1020,650)"/>
+    <wire from="(1020,340)" to="(1020,710)"/>
     <wire from="(1120,190)" to="(1120,230)"/>
     <wire from="(1280,190)" to="(1280,230)"/>
-    <wire from="(1370,120)" to="(1370,280)"/>
+    <wire from="(1450,190)" to="(1450,230)"/>
     <wire from="(150,140)" to="(150,270)"/>
     <wire from="(150,140)" to="(360,140)"/>
     <wire from="(150,270)" to="(430,270)"/>
+    <wire from="(1550,120)" to="(1550,280)"/>
     <wire from="(290,180)" to="(320,180)"/>
     <wire from="(290,230)" to="(320,230)"/>
-    <wire from="(310,340)" to="(310,650)"/>
+    <wire from="(310,340)" to="(310,710)"/>
     <wire from="(310,340)" to="(920,340)"/>
-    <wire from="(310,650)" to="(1020,650)"/>
+    <wire from="(310,710)" to="(1020,710)"/>
     <wire from="(390,520)" to="(470,520)"/>
     <wire from="(400,480)" to="(410,480)"/>
     <wire from="(410,480)" to="(410,490)"/>
@@ -317,10 +335,10 @@ xxxxxx000011 0010101000 # JAL
     <wire from="(490,520)" to="(550,520)"/>
     <wire from="(520,120)" to="(520,280)"/>
     <wire from="(520,120)" to="(550,120)"/>
-    <wire from="(520,280)" to="(1370,280)"/>
+    <wire from="(520,280)" to="(1550,280)"/>
     <wire from="(590,190)" to="(590,230)"/>
     <wire from="(600,520)" to="(670,520)"/>
-    <wire from="(630,120)" to="(1370,120)"/>
+    <wire from="(630,120)" to="(1550,120)"/>
     <wire from="(690,400)" to="(690,430)"/>
     <wire from="(690,400)" to="(810,400)"/>
     <wire from="(690,460)" to="(700,460)"/>
@@ -328,6 +346,8 @@ xxxxxx000011 0010101000 # JAL
     <wire from="(690,520)" to="(810,520)"/>
     <wire from="(690,550)" to="(700,550)"/>
     <wire from="(690,580)" to="(700,580)"/>
+    <wire from="(690,610)" to="(690,650)"/>
+    <wire from="(690,650)" to="(810,650)"/>
     <wire from="(700,190)" to="(700,230)"/>
     <wire from="(700,440)" to="(700,460)"/>
     <wire from="(700,440)" to="(810,440)"/>
