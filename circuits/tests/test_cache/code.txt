@@ -1,0 +1,10 @@
+00400000: <main> ; <input:0> main:
+00400000: 201004d2 ; <input:1> addi $s0, $zero, 1234
+00400004: ac100001 ; <input:2> sw $s0, 1($zero)
+00400008: 8c080001 ; <input:3> lw $t0, 1($zero)
+0040000c: 12080001 ; <input:4> beq $s0, $t0, next
+00400010: 2009000c ; <input:5> addi $t1, $zero, 12
+00400014: <next> ; <input:6> next:addi $t2, $zero, 15
+00400014: 200a000f ; <input:6> next:addi $t2, $zero, 15
+00400018: ac0a0005 ; <input:7> sw $t2, 5($zero)
+0040001c: 03e00008 ; <input:8> jr $ra
