@@ -1,12 +1,16 @@
+import os
+root_path = input("Enter your root path:")
 filename = input("Enter your binary filename:")
 
-binaryFile = open(filename, "r")
+file_addr = os.path.join(root_path, filename)
+binaryFile = open(file_addr, "r")
 
 instFileNames = ["instMem0.txt", "instMem1.txt", "instMem2.txt", "instMem3.txt"]
 instFiles = []
 
 for name in instFileNames:
-    file = open(name, "w")
+    name_addr = root_path + name
+    file = open(name_addr, "w")
     instFiles.append(file)
     file.write("v2.0 raw\n")
 
