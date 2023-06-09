@@ -16,6 +16,9 @@
       <a name="appearance" val="classic"/>
       <a name="radix" val="16"/>
     </tool>
+    <tool name="Tunnel">
+      <a name="width" val="2"/>
+    </tool>
     <tool name="Pull Resistor">
       <a name="facing" val="north"/>
     </tool>
@@ -38,13 +41,13 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#l1_cache.circ" name="8"/>
-  <lib desc="file#alu_control.circ" name="9"/>
-  <lib desc="file#regfile.circ" name="10"/>
-  <lib desc="file#mem.circ" name="11"/>
-  <lib desc="file#alu.circ" name="12"/>
-  <lib desc="file#control_unit.circ" name="13"/>
-  <lib desc="file#memDelayed.circ" name="14"/>
+  <lib desc="file#alu.circ" name="8"/>
+  <lib desc="file#regfile.circ" name="9"/>
+  <lib desc="file#alu_control.circ" name="10"/>
+  <lib desc="file#control_unit.circ" name="11"/>
+  <lib desc="file#memDelayed.circ" name="12"/>
+  <lib desc="file#l1_cache.circ" name="13"/>
+  <lib desc="file#mem.circ" name="14"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -236,6 +239,9 @@
       <a name="facing" val="north"/>
       <a name="label" val="Reg_Write"/>
     </comp>
+    <comp lib="0" loc="(130,1500)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(1300,1520)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="rs"/>
@@ -264,9 +270,6 @@
       <a name="label" val="ALU_Src"/>
     </comp>
     <comp lib="0" loc="(140,1470)" name="Clock"/>
-    <comp lib="0" loc="(140,1500)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
     <comp lib="0" loc="(1430,2030)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="bit0" val="3"/>
@@ -957,19 +960,17 @@
     <comp lib="1" loc="(270,2080)" name="NOT Gate"/>
     <comp lib="1" loc="(450,1730)" name="AND Gate"/>
     <comp lib="1" loc="(470,2210)" name="NOT Gate"/>
-    <comp lib="10" loc="(1570,1540)" name="regfile">
-      <a name="label" val="RegisterFile"/>
+    <comp lib="10" loc="(2270,1480)" name="alu_control_unit">
+      <a name="label" val="ALU_Control"/>
     </comp>
-    <comp lib="11" loc="(720,2060)" name="mem">
-      <a name="label" val="InstMem"/>
-    </comp>
-    <comp lib="12" loc="(1790,960)" name="ALU">
-      <a name="label" val="ArithLogicUnit"/>
-    </comp>
-    <comp lib="13" loc="(960,1170)" name="control_unit">
+    <comp lib="11" loc="(960,1170)" name="control_unit">
       <a name="label" val="CU"/>
     </comp>
-    <comp lib="14" loc="(2640,2330)" name="memDelayed"/>
+    <comp lib="12" loc="(2640,2330)" name="memDelayed"/>
+    <comp lib="13" loc="(1980,2060)" name="Cache"/>
+    <comp lib="14" loc="(720,2060)" name="mem">
+      <a name="label" val="InstMem"/>
+    </comp>
     <comp lib="2" loc="(1200,1730)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="width" val="32"/>
@@ -1042,7 +1043,7 @@
     <comp lib="6" loc="(1385,1860)" name="Text">
       <a name="text" val="Cache-memory"/>
     </comp>
-    <comp lib="6" loc="(144,1662)" name="Text">
+    <comp lib="6" loc="(140,1660)" name="Text">
       <a name="text" val="Clk_Check"/>
     </comp>
     <comp lib="6" loc="(145,1045)" name="Text">
@@ -1060,9 +1061,11 @@
     <comp lib="6" loc="(515,835)" name="Text">
       <a name="text" val="Jump"/>
     </comp>
-    <comp lib="8" loc="(1980,2060)" name="Cache"/>
-    <comp lib="9" loc="(2270,1480)" name="alu_control_unit">
-      <a name="label" val="ALU_Control"/>
+    <comp lib="8" loc="(1790,960)" name="ALU">
+      <a name="label" val="ArithLogicUnit"/>
+    </comp>
+    <comp lib="9" loc="(1570,1540)" name="regfile">
+      <a name="label" val="RegisterFile"/>
     </comp>
     <wire from="(100,1040)" to="(100,1350)"/>
     <wire from="(100,1350)" to="(530,1350)"/>
@@ -1110,6 +1113,7 @@
     <wire from="(1290,1640)" to="(1290,1690)"/>
     <wire from="(1290,1640)" to="(1350,1640)"/>
     <wire from="(1290,1690)" to="(1300,1690)"/>
+    <wire from="(130,1500)" to="(220,1500)"/>
     <wire from="(1300,1520)" to="(1350,1520)"/>
     <wire from="(1310,1860)" to="(1310,2920)"/>
     <wire from="(1310,2920)" to="(2910,2920)"/>
@@ -1126,7 +1130,6 @@
     <wire from="(1390,1950)" to="(1520,1950)"/>
     <wire from="(1390,1990)" to="(1410,1990)"/>
     <wire from="(140,1470)" to="(230,1470)"/>
-    <wire from="(140,1500)" to="(220,1500)"/>
     <wire from="(1400,1040)" to="(1430,1040)"/>
     <wire from="(1410,940)" to="(1410,960)"/>
     <wire from="(1410,960)" to="(1570,960)"/>
