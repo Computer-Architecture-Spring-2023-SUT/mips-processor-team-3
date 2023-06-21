@@ -1,0 +1,36 @@
+00400000: 20100001 ; <input:8> addi $s0, $zero, 1
+00400004: 22100001 ; <input:9> addi $s0, $s0, 1
+00400008: 8c080000 ; <input:10> lw $t0, 0($zero)
+0040000c: 8c080000 ; <input:11> lw $t0, 0($zero)
+00400010: 20100001 ; <input:12> addi $s0, $zero, 1
+00400014: ac100000 ; <input:13> sw $s0, 0($zero)
+00400018: 20100002 ; <input:14> addi $s0, $zero, 2
+0040001c: ac100004 ; <input:15> sw $s0, 4($zero)
+00400020: 20100003 ; <input:16> addi $s0, $zero, 3
+00400024: ac100008 ; <input:17> sw $s0, 8($zero)
+00400028: 20100004 ; <input:18> addi $s0, $zero, 4
+0040002c: ac10000c ; <input:19> sw $s0, 12($zero)
+00400030: 8c080000 ; <input:20> lw $t0, 0($zero)
+00400034: 8c090004 ; <input:21> lw $t1, 4($zero)
+00400038: 8c0a0008 ; <input:22> lw $t2, 8($zero)
+0040003c: 8c0b000c ; <input:23> lw $t3, 12($zero)
+00400040: 00008020 ; <input:25> add $s0, $zero, $zero
+00400044: 00008020 ; <input:26> add $s0, $zero, $zero
+00400048: 8c080040 ; <input:28> lw $t0, 64($zero)
+0040004c: 8c080040 ; <input:29> lw $t0, 64($zero)
+00400050: 2010000b ; <input:30> addi $s0, $zero, 11
+00400054: ac100040 ; <input:31> sw $s0, 64($zero)
+00400058: 2010000c ; <input:32> addi $s0, $zero, 12
+0040005c: ac100044 ; <input:33> sw $s0, 68($zero)
+00400060: 2010000d ; <input:34> addi $s0, $zero, 13
+00400064: ac100048 ; <input:35> sw $s0, 72($zero)
+00400068: 2010000e ; <input:36> addi $s0, $zero, 14
+0040006c: ac10004c ; <input:37> sw $s0, 76($zero)
+00400070: 8c080040 ; <input:38> lw $t0, 64($zero)
+00400074: 8c090044 ; <input:39> lw $t1, 68($zero)
+00400078: 8c0a0048 ; <input:40> lw $t2, 72($zero)
+0040007c: 8c0b004c ; <input:41> lw $t3, 76($zero)
+00400080: 00008020 ; <input:43> add $s0, $zero, $zero
+00400084: 00008020 ; <input:44> add $s0, $zero, $zero
+00400088: 8c080080 ; <input:46> lw $t0, 128($zero)
+0040008c: 8c080080 ; <input:47> lw $t0, 128($zero)
