@@ -41,13 +41,13 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#alu.circ" name="8"/>
-  <lib desc="file#l1_cache.circ" name="9"/>
-  <lib desc="file#control_unit.circ" name="10"/>
-  <lib desc="file#mem.circ" name="11"/>
-  <lib desc="file#regfile.circ" name="12"/>
-  <lib desc="file#alu_control.circ" name="13"/>
-  <lib desc="file#memDelayed.circ" name="14"/>
+  <lib desc="file#l1_cache.circ" name="8"/>
+  <lib desc="file#mem.circ" name="9"/>
+  <lib desc="file#alu.circ" name="10"/>
+  <lib desc="file#alu_control.circ" name="11"/>
+  <lib desc="file#memDelayed.circ" name="12"/>
+  <lib desc="file#control_unit.circ" name="13"/>
+  <lib desc="file#regfile.circ" name="14"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -501,6 +501,10 @@
       <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(1710,2660)" name="Constant"/>
+    <comp lib="0" loc="(1740,2370)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="is_mem_inst"/>
+    </comp>
     <comp lib="0" loc="(1860,1000)" name="Tunnel">
       <a name="label" val="ALU_Result"/>
       <a name="width" val="32"/>
@@ -1031,8 +1035,8 @@
 00000100 0000100 # w0_fetch_addr
 00000101 0000101 # w1_fetch_addr
 00000110 0000110 # w2_fetch_addr
-00000111 0000010 # w3_fetch_addr
-00001100 1000000 # mem_done
+00000111 0000111 # w3_fetch_addr
+00010001 1000000 # mem_done
 </a>
     </comp>
     <comp lib="1" loc="(1610,2690)" name="AND Gate"/>
@@ -1056,19 +1060,19 @@
     <comp lib="1" loc="(250,2140)" name="NOT Gate"/>
     <comp lib="1" loc="(270,2080)" name="NOT Gate"/>
     <comp lib="1" loc="(470,2210)" name="NOT Gate"/>
-    <comp lib="10" loc="(960,1170)" name="control_unit">
-      <a name="label" val="CU"/>
+    <comp lib="10" loc="(1790,960)" name="ALU">
+      <a name="label" val="ArithLogicUnit"/>
     </comp>
-    <comp lib="11" loc="(720,2060)" name="mem">
-      <a name="label" val="InstMem"/>
-    </comp>
-    <comp lib="12" loc="(1570,1540)" name="regfile">
-      <a name="label" val="RegisterFile"/>
-    </comp>
-    <comp lib="13" loc="(2270,1480)" name="alu_control_unit">
+    <comp lib="11" loc="(2270,1480)" name="alu_control_unit">
       <a name="label" val="ALU_Control"/>
     </comp>
-    <comp lib="14" loc="(2640,2330)" name="memDelayed"/>
+    <comp lib="12" loc="(2640,2330)" name="memDelayed"/>
+    <comp lib="13" loc="(960,1170)" name="control_unit">
+      <a name="label" val="CU"/>
+    </comp>
+    <comp lib="14" loc="(1570,1540)" name="regfile">
+      <a name="label" val="RegisterFile"/>
+    </comp>
     <comp lib="2" loc="(1200,1730)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="width" val="32"/>
@@ -1127,7 +1131,7 @@
     </comp>
     <comp lib="4" loc="(1740,2610)" name="Counter">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="max" val="0xe"/>
+      <a name="max" val="0x12"/>
     </comp>
     <comp lib="4" loc="(320,2030)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
@@ -1150,9 +1154,6 @@
     <comp lib="6" loc="(225,2470)" name="Text">
       <a name="text" val="Test_Outs"/>
     </comp>
-    <comp lib="6" loc="(2505,2065)" name="Text">
-      <a name="text" val="note: change write back data order"/>
-    </comp>
     <comp lib="6" loc="(380,695)" name="Text">
       <a name="text" val="Next"/>
     </comp>
@@ -1165,10 +1166,10 @@
     <comp lib="6" loc="(515,835)" name="Text">
       <a name="text" val="Jump"/>
     </comp>
-    <comp lib="8" loc="(1790,960)" name="ALU">
-      <a name="label" val="ArithLogicUnit"/>
+    <comp lib="8" loc="(1980,2060)" name="Cache"/>
+    <comp lib="9" loc="(720,2060)" name="mem">
+      <a name="label" val="InstMem"/>
     </comp>
-    <comp lib="9" loc="(1980,2060)" name="Cache"/>
     <wire from="(100,1040)" to="(100,1350)"/>
     <wire from="(100,1350)" to="(530,1350)"/>
     <wire from="(1000,1190)" to="(1000,1210)"/>
@@ -1322,6 +1323,8 @@
     <wire from="(1740,2080)" to="(1760,2080)"/>
     <wire from="(1740,2160)" to="(1740,2330)"/>
     <wire from="(1740,2160)" to="(1760,2160)"/>
+    <wire from="(1740,2370)" to="(1760,2370)"/>
+    <wire from="(1760,2180)" to="(1760,2370)"/>
     <wire from="(1790,960)" to="(1810,960)"/>
     <wire from="(1790,980)" to="(1810,980)"/>
     <wire from="(1810,1000)" to="(1860,1000)"/>
