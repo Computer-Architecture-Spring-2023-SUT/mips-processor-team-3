@@ -41,13 +41,13 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#regfile.circ" name="8"/>
-  <lib desc="file#mem.circ" name="9"/>
-  <lib desc="file#control_unit.circ" name="10"/>
-  <lib desc="file#l1_cache.circ" name="11"/>
-  <lib desc="file#memDelayed.circ" name="12"/>
-  <lib desc="file#alu_control.circ" name="13"/>
-  <lib desc="file#alu.circ" name="14"/>
+  <lib desc="file#alu_control.circ" name="8"/>
+  <lib desc="file#regfile.circ" name="9"/>
+  <lib desc="file#alu.circ" name="10"/>
+  <lib desc="file#mem.circ" name="11"/>
+  <lib desc="file#control_unit.circ" name="12"/>
+  <lib desc="file#l1_cache.circ" name="13"/>
+  <lib desc="file#memDelayed.circ" name="14"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -1062,17 +1062,17 @@
     <comp lib="1" loc="(250,2140)" name="NOT Gate"/>
     <comp lib="1" loc="(270,2080)" name="NOT Gate"/>
     <comp lib="1" loc="(470,2210)" name="NOT Gate"/>
-    <comp lib="10" loc="(960,1170)" name="control_unit">
-      <a name="label" val="CU"/>
-    </comp>
-    <comp lib="11" loc="(1970,2060)" name="Cache"/>
-    <comp lib="12" loc="(2590,2330)" name="memDelayed"/>
-    <comp lib="13" loc="(2270,1480)" name="alu_control_unit">
-      <a name="label" val="ALU_Control"/>
-    </comp>
-    <comp lib="14" loc="(1790,960)" name="ALU">
+    <comp lib="10" loc="(1790,960)" name="ALU">
       <a name="label" val="ArithLogicUnit"/>
     </comp>
+    <comp lib="11" loc="(720,2060)" name="mem">
+      <a name="label" val="InstMem"/>
+    </comp>
+    <comp lib="12" loc="(960,1170)" name="control_unit">
+      <a name="label" val="CU"/>
+    </comp>
+    <comp lib="13" loc="(1970,2060)" name="Cache"/>
+    <comp lib="14" loc="(2590,2330)" name="memDelayed"/>
     <comp lib="2" loc="(1200,1730)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="width" val="32"/>
@@ -1151,7 +1151,7 @@
     <comp lib="6" loc="(145,1660)" name="Text">
       <a name="text" val="Clk_Check"/>
     </comp>
-    <comp lib="6" loc="(2101,2336)" name="Text">
+    <comp lib="6" loc="(2100,2335)" name="Text">
       <a name="text" val="is_bit_valid"/>
     </comp>
     <comp lib="6" loc="(225,2470)" name="Text">
@@ -1169,11 +1169,11 @@
     <comp lib="6" loc="(515,835)" name="Text">
       <a name="text" val="Jump"/>
     </comp>
-    <comp lib="8" loc="(1570,1540)" name="regfile">
-      <a name="label" val="RegisterFile"/>
+    <comp lib="8" loc="(2270,1480)" name="alu_control_unit">
+      <a name="label" val="ALU_Control"/>
     </comp>
-    <comp lib="9" loc="(720,2060)" name="mem">
-      <a name="label" val="InstMem"/>
+    <comp lib="9" loc="(1570,1540)" name="regfile">
+      <a name="label" val="RegisterFile"/>
     </comp>
     <wire from="(100,1040)" to="(100,1350)"/>
     <wire from="(100,1350)" to="(530,1350)"/>

@@ -1693,18 +1693,18 @@
     <comp lib="0" loc="(330,1210)" name="Tunnel">
       <a name="label" val="LRU_Update3"/>
     </comp>
+    <comp lib="0" loc="(340,730)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="memWriteData"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(340,830)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="is_mem_inst"/>
     </comp>
-    <comp lib="0" loc="(350,700)" name="Tunnel">
+    <comp lib="0" loc="(350,690)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="mem_read_data"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(350,730)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="memWriteData"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(360,370)" name="Pin">
@@ -3458,6 +3458,7 @@
     <wire from="(330,2120)" to="(330,2410)"/>
     <wire from="(330,2120)" to="(360,2120)"/>
     <wire from="(330,2410)" to="(360,2410)"/>
+    <wire from="(340,730)" to="(360,730)"/>
     <wire from="(340,830)" to="(430,830)"/>
     <wire from="(350,1540)" to="(350,1610)"/>
     <wire from="(350,1540)" to="(360,1540)"/>
@@ -3475,9 +3476,10 @@
     <wire from="(350,2430)" to="(360,2430)"/>
     <wire from="(350,2490)" to="(350,2570)"/>
     <wire from="(350,2570)" to="(360,2570)"/>
-    <wire from="(350,700)" to="(380,700)"/>
-    <wire from="(350,730)" to="(360,730)"/>
+    <wire from="(350,690)" to="(360,690)"/>
     <wire from="(360,370)" to="(450,370)"/>
+    <wire from="(360,690)" to="(360,700)"/>
+    <wire from="(360,700)" to="(380,700)"/>
     <wire from="(360,720)" to="(360,730)"/>
     <wire from="(360,720)" to="(380,720)"/>
     <wire from="(370,430)" to="(440,430)"/>
