@@ -1,0 +1,22 @@
+00400000: 00000024 ; <input:7> and $zero, $zero, $zero
+00400004: 20100040 ; <input:8> addi $s0, $zero, 64
+00400008: 20110054 ; <input:9> addi $s1, $zero, 84
+0040000c: 8c120000 ; <input:10> lw $s2, 0($zero)
+00400010: 2013000a ; <input:11> addi $s3, $zero, 10
+00400014: 00000024 ; <input:12> and $zero, $zero, $zero
+00400018: 00000024 ; <input:13> and $zero, $zero, $zero
+0040001c: 00000024 ; <input:14> and $zero, $zero, $zero
+00400020: 00000024 ; <input:15> and $zero, $zero, $zero
+00400024: 00000024 ; <input:16> and $zero, $zero, $zero
+00400028: 2252000a ; <input:17> addi $s2, $s2, 10
+0040002c: 00000024 ; <input:18> and $zero, $zero, $zero
+00400030: 00000024 ; <input:19> and $zero, $zero, $zero
+00400034: 00000024 ; <input:20> and $zero, $zero, $zero
+00400038: 00000024 ; <input:21> and $zero, $zero, $zero
+0040003c: 00000024 ; <input:22> and $zero, $zero, $zero
+00400040: ac120000 ; <input:23> sw $s2, 0($zero)
+00400044: 00000024 ; <input:24> and $zero, $zero, $zero
+00400048: 00000024 ; <input:25> and $zero, $zero, $zero
+0040004c: 00000024 ; <input:26> and $zero, $zero, $zero
+00400050: 00000024 ; <input:27> and $zero, $zero, $zero
+00400054: 00000024 ; <input:28> and $zero, $zero, $zero
