@@ -1,0 +1,34 @@
+00400000: 00000024 ; <input:7> and $zero, $zero, $zero
+00400004: 2010000a ; <input:8> addi $s0, $zero, 10
+00400008: 2011000a ; <input:9> addi $s1, $zero, 10
+0040000c: 01084024 ; <input:10> and $t0, $t0, $t0
+00400010: 01294824 ; <input:11> and $t1, $t1, $t1
+00400014: 014a5024 ; <input:12> and $t2, $t2, $t2
+00400018: 016b5824 ; <input:13> and $t3, $t3, $t3
+0040001c: 018c6024 ; <input:14> and $t4, $t4, $t4
+00400020: 01ad6824 ; <input:15> and $t5, $t5, $t5
+00400024: 12110007 ; <input:16> beq $s0, $s1, target1
+00400028: 20150020 ; <input:17> addi $s5, $zero, 32
+0040002c: 01084024 ; <input:18> and $t0, $t0, $t0
+00400030: 01294824 ; <input:19> and $t1, $t1, $t1
+00400034: 014a5024 ; <input:20> and $t2, $t2, $t2
+00400038: 016b5824 ; <input:21> and $t3, $t3, $t3
+0040003c: 018c6024 ; <input:22> and $t4, $t4, $t4
+00400040: 01ad6824 ; <input:23> and $t5, $t5, $t5
+00400044: <target1> ; <input:24> target1:
+00400044: 12120007 ; <input:25> beq $s0, $s2, target2
+00400048: 20160040 ; <input:26> addi $s6, $zero, 64
+0040004c: 01084024 ; <input:27> and $t0, $t0, $t0
+00400050: 01294824 ; <input:28> and $t1, $t1, $t1
+00400054: 014a5024 ; <input:29> and $t2, $t2, $t2
+00400058: 016b5824 ; <input:30> and $t3, $t3, $t3
+0040005c: 018c6024 ; <input:31> and $t4, $t4, $t4
+00400060: 01ad6824 ; <input:32> and $t5, $t5, $t5
+00400064: <target2> ; <input:33> target2:
+00400064: 20170080 ; <input:34> addi $s7, $zero, 128
+00400068: 01084024 ; <input:35> and $t0, $t0, $t0
+0040006c: 01294824 ; <input:36> and $t1, $t1, $t1
+00400070: 014a5024 ; <input:37> and $t2, $t2, $t2
+00400074: 016b5824 ; <input:38> and $t3, $t3, $t3
+00400078: 018c6024 ; <input:39> and $t4, $t4, $t4
+0040007c: 01ad6824 ; <input:40> and $t5, $t5, $t5
