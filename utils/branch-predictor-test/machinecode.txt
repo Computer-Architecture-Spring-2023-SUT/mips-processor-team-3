@@ -1,0 +1,21 @@
+00400000: 00000024 ; <input:7> and $zero, $zero, $zero
+00400004: 2010000a ; <input:8> addi $s0, $zero, 10
+00400008: 00000024 ; <input:9> and $zero, $zero, $zero
+0040000c: 00000024 ; <input:10> and $zero, $zero, $zero
+00400010: 00000024 ; <input:11> and $zero, $zero, $zero
+00400014: 00000024 ; <input:12> and $zero, $zero, $zero
+00400018: 00000024 ; <input:13> and $zero, $zero, $zero
+0040001c: <loop> ; <input:14> loop:
+0040001c: 2210ffff ; <input:15> addi $s0, $s0, -1
+00400020: 00000024 ; <input:16> and $zero, $zero, $zero
+00400024: 00000024 ; <input:17> and $zero, $zero, $zero
+00400028: 00000024 ; <input:18> and $zero, $zero, $zero
+0040002c: 00000024 ; <input:19> and $zero, $zero, $zero
+00400030: 00000024 ; <input:20> and $zero, $zero, $zero
+00400034: 1600fff9 ; <input:21> bne $s0, $zero, loop
+00400038: 20110014 ; <input:22> addi $s1, $zero, 20
+0040003c: 00000024 ; <input:23> and $zero, $zero, $zero
+00400040: 00000024 ; <input:24> and $zero, $zero, $zero
+00400044: 00000024 ; <input:25> and $zero, $zero, $zero
+00400048: 00000024 ; <input:26> and $zero, $zero, $zero
+0040004c: 00000024 ; <input:27> and $zero, $zero, $zero
